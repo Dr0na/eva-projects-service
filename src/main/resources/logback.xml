@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<configuration scan="true" debug="false">
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <logger name="org.embl.geonmics.projects" level="DEBUG"/>
+
+    <root level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
