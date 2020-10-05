@@ -1,6 +1,7 @@
 # eva-projects-service
 This repository hosts a Spring Boot based ReSTful service implementation for listing genome sequencing and variation study projects at EMBL. The service allows fetching information by project id alongwith searching projects on taxonomy common name.    
 
+It uses an volatile in-mem H2 database. The data is lost on application shutdown. It is  automatically loaded back on application startup from [data.sql](src/main/resources/data.sql) file. The database implementation could be changed if desired with no change in code.
 
 # Features
 1. Support for listing project by Id
