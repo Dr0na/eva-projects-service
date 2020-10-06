@@ -12,7 +12,7 @@
 
 	<groupId>org.embl.genomics</groupId>
 	<artifactId>projects-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>projects-service</name>
 	<description>EVA Projects Service</description>
 
