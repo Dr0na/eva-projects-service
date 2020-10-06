@@ -12,8 +12,10 @@ import java.util.concurrent.ThreadLocalRandom;
 import org.embl.genomics.projects.model.Project;
 import org.embl.genomics.projects.model.Taxonomy;
 import org.embl.genomics.projects.repository.ProjectsRepository;
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -33,7 +35,6 @@ class ProjectsControllerUnitTests {
   private ProjectsRepository projectsRepo;
 
   private static final String projectInfoUri = "/api/1.0/projects/{0}";
-//  private static final String projectListFilterByTaxonomyUri = "/api/1.0/projects?taxonomyCommonName={0}";
   
   private final List<Project> projectList;
   
@@ -58,6 +59,16 @@ class ProjectsControllerUnitTests {
     projectList.add(projectPig);
     projectList.add(projectCow);
     projectList.add(projectSheep);
+    
+  }
+  
+  @Before
+  public void setUp(){
+      MockitoAnnotations.initMocks(this);
+      
+      for (Project project : projectList) {
+        projectsRepo.save(project);
+      }
   }
 
   @Test
