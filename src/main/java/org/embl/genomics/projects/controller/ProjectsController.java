@@ -37,11 +37,7 @@ public class ProjectsController {
   @Operation(description = "Lists all genome sequencing projects.")
   @GetMapping(value = "/projects", produces = APPLICATION_JSON_VALUE)
   public Page<Project> getAllProjects(ProjectSpec projectSpec, Pageable pageable) {
-     Page<Project> page = repository.findAll(projectSpec, pageable);
-     if (page.getNumberOfElements() < 1) {
-       throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No resource found!");
-     }
-     return page;
+     return repository.findAll(projectSpec, pageable);
   }
 
   @Operation(description = "List details of a project.")
