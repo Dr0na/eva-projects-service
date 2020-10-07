@@ -17,7 +17,7 @@ The OpenAPI documentation can be accessed at this [link](http://localhost:8080/s
 
 Method | URI | Query params | Response Codes
 ------------ | ------------- | ------------- | -------------
-GET | /api/1.0/projects | <ul><li><strong>taxonomyCommonName (string) </strong> - taxonomy common name. Value can be case-insensitive.</li><li><strong>page (integer) </strong> - Zero based page number</li><li> <strong>size (integer)</strong> - items to list in the page</li><li><strong>sort (string)</strong> - comma separated list of attributes to sort the output on</li></ul> | <ul><li><strong>200</strong> - when matching resource(s) is found.</li><li><strong>404</strong> - when no matching resource(s) is found.</li></ul>
+GET | /api/1.0/projects | <ul><li><strong>taxonomyCommonName (string) </strong> - taxonomy common name. Value can be case-insensitive.</li><li><strong>page (integer) </strong> - Zero based page number</li><li> <strong>size (integer)</strong> - items to list in the page</li><li><strong>sort (string)</strong> - comma separated list of attributes to sort the output on</li></ul> | <ul><li><strong>200</strong>.</li></ul>
 GET | /api/1.0/projects/{projectId} | None | <ul><li><strong>200</strong> - when matching resource(s) is found.</li><li><strong>404</strong> - when no matching resource(s) is found.</li></ul>
 
 # Usage examples
