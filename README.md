@@ -35,3 +35,5 @@ GET | /api/1.0/projects/{projectId} | None | <ul><li><strong>200</strong> - when
 3. [springdoc-openapi](https://springdoc.org/) - For OpenApi document generation
 2. [Lombok](https://projectlombok.org/) - For auto-generation of code
 2. [specification-arg-resolver](https://github.com/tkaczmarzyk/specification-arg-resolver) - An alternative API for filtering data with Spring MVC and Spring Data JPA
+
+
